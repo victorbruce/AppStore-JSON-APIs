@@ -6,9 +6,9 @@
 //
 
 import UIKit
+import SDWebImage
 
 class SearchViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout  {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -49,10 +49,8 @@ class SearchViewController: UICollectionViewController, UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchResultCell.identifier, for: indexPath) as? SearchResultCell else { return UICollectionViewCell() }
         
-        let appResult = appResults[indexPath.item]
-        cell.nameLabel.text = appResult.trackName
-        cell.categoryLabel.text = appResult.primaryGenreName
-        cell.ratingsLabel.text = "Rating \(appResult.averageUserRating ?? 0)"
+        cell.appResult = appResults[indexPath.item]
+        
         return cell
     }
 

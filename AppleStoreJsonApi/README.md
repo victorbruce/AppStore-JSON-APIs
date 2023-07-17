@@ -16,3 +16,9 @@ A tutorial course by **Brain Voong** from Let's Build That App(LBTA) on how to f
 - Snapping Flow Layout
 - Generics
 
+### Project Structure:
+
+- Service: holds all logic relating to network requests
+- Model: holds a list of constructed models for representing data
+- Views: holds a list of reusable or standalone views used across the app
+- Controllers: holds all view controllers
