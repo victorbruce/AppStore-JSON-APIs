@@ -17,6 +17,25 @@ class SearchViewController: UICollectionViewController, UICollectionViewDelegate
         navigationController?.navigationBar.prefersLargeTitles = true
         
         collectionView.register(SearchResultCell.self, forCellWithReuseIdentifier: SearchResultCell.identifier)
+        
+        fetchITunesApps()
+    }
+    
+    fileprivate var appResults = [Result]()
+    
+    fileprivate func fetchITunesApps() {
+        Service.shared.fetchApps { (results, error) in
+            if let error = error {
+                print("Failed to fetch apps:", error)
+                return
+            }
+            
+            self.appResults = results
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -24,11 +43,16 @@ class SearchViewController: UICollectionViewController, UICollectionViewDelegate
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return appResults.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchResultCell.identifier, for: indexPath) as? SearchResultCell else { return UICollectionViewCell() }
+        
+        let appResult = appResults[indexPath.item]
+        cell.nameLabel.text = appResult.trackName
+        cell.categoryLabel.text = appResult.primaryGenreName
+        cell.ratingsLabel.text = "Rating \(appResult.averageUserRating ?? 0)"
         return cell
     }
 
