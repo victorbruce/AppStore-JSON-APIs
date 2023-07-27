@@ -21,7 +21,6 @@ class AppsHeaderCell: UICollectionViewCell {
     }
     
     private func setupLayout() {
-        imageView.backgroundColor = .red
         titleLabel.numberOfLines = 2
         companyLabel.textColor = .blue
         

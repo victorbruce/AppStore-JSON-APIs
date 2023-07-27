@@ -10,7 +10,7 @@ import UIKit
 class AppsGroupCell: UICollectionViewCell {
     static var identifier = "AppsGroupCell"
     
-    let titleLabel = UILabel(text: "App Section", font: .boldSystemFont(ofSize: 30))
+    let titleLabel = UILabel(text: "App Section", font: .boldSystemFont(ofSize: 24))
     
     let horizontalController = AppsHorizontalController()
     
