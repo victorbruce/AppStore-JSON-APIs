@@ -9,6 +9,15 @@ import UIKit
 
 class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout {
     
+    let activityIndicatorView: UIActivityIndicatorView = {
+        let aiv = UIActivityIndicatorView(style: .large)
+        aiv.color = .black
+        aiv.startAnimating()
+        aiv.hidesWhenStopped = true
+        aiv.translatesAutoresizingMaskIntoConstraints = false
+        return aiv
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,6 +27,10 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         collectionView.backgroundColor = .white
         collectionView.register(AppsGroupCell.self, forCellWithReuseIdentifier: AppsGroupCell.identifier)
         collectionView.register(AppsPageHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: AppsPageHeader.identifier)
+        
+        view.addSubview(activityIndicatorView)
+        activityIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        activityIndicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         fetchData()
     }
@@ -66,6 +79,8 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         
         dispatchGroup.notify(queue: .main) {
             print("completed your dispatch group task...")
+            self.activityIndicatorView.stopAnimating()
+            
             if let group = group1 {
                 self.groups.append(group)
             }
