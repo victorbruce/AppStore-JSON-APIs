@@ -104,6 +104,7 @@
 		DB8238512A53642800904DB4 = {
 			isa = PBXGroup;
 			children = (
+				DB8238712A53648400904DB4 /* README.md */,
 				DB82385C2A53642800904DB4 /* AppleStoreJsonApi */,
 				DB82385B2A53642800904DB4 /* Products */,
 			);
@@ -131,7 +132,6 @@
 				DB8238662A53642A00904DB4 /* Assets.xcassets */,
 				DB8238682A53642A00904DB4 /* LaunchScreen.storyboard */,
 				DB82386B2A53642A00904DB4 /* Info.plist */,
-				DB8238712A53648400904DB4 /* README.md */,
 			);
 			path = AppleStoreJsonApi;
 			sourceTree = "<group>";
