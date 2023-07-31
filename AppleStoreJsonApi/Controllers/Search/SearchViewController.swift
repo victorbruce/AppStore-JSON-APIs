@@ -60,7 +60,7 @@ class SearchViewController: BaseListController, UICollectionViewDelegateFlowLayo
                     print("Failed to search for app:", error)
                     return
                 }
-                self.appResults = results
+                self.appResults = results?.results ?? []
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
@@ -75,7 +75,7 @@ class SearchViewController: BaseListController, UICollectionViewDelegateFlowLayo
                 return
             }
             
-            self.appResults = results
+            self.appResults = results?.results ?? []
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
