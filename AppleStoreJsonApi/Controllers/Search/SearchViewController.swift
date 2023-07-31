@@ -48,7 +48,6 @@ class SearchViewController: BaseListController, UICollectionViewDelegateFlowLayo
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
         
         timer?.invalidate() // this prevents the timer from refiring when typing
         

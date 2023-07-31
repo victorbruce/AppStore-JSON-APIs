@@ -31,6 +31,8 @@
 		DB9BC4D72A714D5100076713 /* AppsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9BC4D62A714D5100076713 /* AppsHeaderCell.swift */; };
 		DB9BC4D92A71C28A00076713 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9BC4D82A71C28A00076713 /* AppGroup.swift */; };
 		DBAA92262A7281E2005F9EC9 /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA92252A7281E2005F9EC9 /* SocialApp.swift */; };
+		DBC3E9882A77AAB6007283F1 /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC3E9872A77AAB6007283F1 /* HorizontalSnappingController.swift */; };
+		DBC3E98A2A77B2BC007283F1 /* BetterSnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC3E9892A77B2BC007283F1 /* BetterSnappingLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		DB9BC4D62A714D5100076713 /* AppsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCell.swift; sourceTree = "<group>"; };
 		DB9BC4D82A71C28A00076713 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		DBAA92252A7281E2005F9EC9 /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
+		DBC3E9872A77AAB6007283F1 /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
+		DBC3E9892A77B2BC007283F1 /* BetterSnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterSnappingLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 				DB9BC4C22A6E71AF00076713 /* Apps */,
 				DB8238722A5366B100904DB4 /* MainTabBarNavigationController.swift */,
 				DB9BC4C32A6E72F300076713 /* BaseListController.swift */,
+				DBC3E9872A77AAB6007283F1 /* HorizontalSnappingController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			children = (
 				DB9BC4CE2A7108C800076713 /* Extensions.swift */,
 				DB9BC4D02A7115C600076713 /* VerticalStackView.swift */,
+				DBC3E9892A77B2BC007283F1 /* BetterSnappingLayout.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -266,6 +272,7 @@
 				DB8238732A5366B100904DB4 /* MainTabBarNavigationController.swift in Sources */,
 				DB9BC4CA2A6FEFA400076713 /* AppsHorizontalController.swift in Sources */,
 				DB9BC4C42A6E72F300076713 /* BaseListController.swift in Sources */,
+				DBC3E98A2A77B2BC007283F1 /* BetterSnappingLayout.swift in Sources */,
 				DB9BC4D32A71470700076713 /* AppsPageHeader.swift in Sources */,
 				DB6E98172A654EB200BB2E4B /* Service.swift in Sources */,
 				DBAA92262A7281E2005F9EC9 /* SocialApp.swift in Sources */,
@@ -282,6 +289,7 @@
 				DB59219A2A5C5021006FDD40 /* SearchResultCell.swift in Sources */,
 				DB9BC4C82A6E754400076713 /* AppsGroupCell.swift in Sources */,
 				DB9BC4D12A7115C600076713 /* VerticalStackView.swift in Sources */,
+				DBC3E9882A77AAB6007283F1 /* HorizontalSnappingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
